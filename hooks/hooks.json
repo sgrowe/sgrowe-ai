@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "input=$(cat); if [ \"$(printf '%s' \"$input\" | jq -r '.stop_hook_active')\" = \"true\" ]; then exit 0; fi; mode=$(printf '%s' \"$input\" | jq -r '.permission_mode'); if [ \"$mode\" != \"acceptEdits\" ] && [ \"$mode\" != \"auto\" ]; then exit 0; fi; script=\"$(jj workspace root)/stop-hook.sh\"; if [ ! -x \"$script\" ]; then exit 0; fi; output=$(\"$script\" 2>&1); rc=$?; if [ $rc -ne 0 ]; then printf '%s\\n' \"$output\" >&2; echo 'Please fix the issues above' >&2; exit 2; fi"
+            "command": "input=$(cat); if [ \"$(printf '%s' \"$input\" | jq -r '.stop_hook_active')\" = \"true\" ]; then exit 0; fi; mode=$(printf '%s' \"$input\" | jq -r '.permission_mode'); if [ \"$mode\" != \"acceptEdits\" ] && [ \"$mode\" != \"auto\" ]; then exit 0; fi; script=\"$(jj workspace root)/scripts/stop-hook.sh\"; if [ ! -x \"$script\" ]; then exit 0; fi; output=$(\"$script\" 2>&1); rc=$?; if [ $rc -ne 0 ]; then printf '%s\\n' \"$output\" >&2; echo 'Please fix the issues above' >&2; exit 2; fi"
           }
         ]
       }
