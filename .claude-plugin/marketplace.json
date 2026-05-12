@@ -1,0 +1,12 @@
+{
+  "name": "sgrowe-ai",
+  "owner": {
+    "name": "Sam Rowe"
+  },
+  "plugins": [
+    {
+      "name": "sgrowe-ai",
+      "source": "."
+    }
+  ]
+}
