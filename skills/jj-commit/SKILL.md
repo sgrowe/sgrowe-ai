@@ -46,6 +46,8 @@ message is to save time compared to gathering a deep understanding of and trying
 to reverse engineer the reasoning behind a change. A super long message defeats
 this.
 
+Use markdown formatting, in particular wrap code snippets in backticks (`exampleFunctionName`)
+
 ## Example of a good commit message
 
 As the commit message to a very large diff, this message provides a clear and
